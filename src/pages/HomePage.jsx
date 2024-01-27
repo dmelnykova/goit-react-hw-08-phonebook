@@ -1,16 +1,10 @@
-import { Button } from '@chakra-ui/react';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import {
-  selectIsLoggedin,
-  selectUserName,
-} from '../redux/authorization/authSelectors';
+import { Button, Link } from '@chakra-ui/react';
+import { useAuth } from '../hooks/useAuth';
 
 export default function HomePage() {
-  const isLoggedin = useSelector(selectIsLoggedin);
-  const userName = useSelector(selectUserName);
+  const { isLoggedIn, userName } = useAuth();
 
-  return isLoggedin ? (
+  return isLoggedIn ? (
     <div>
       <p>Hello {userName}!</p>
       <Button
@@ -28,7 +22,7 @@ export default function HomePage() {
       <h1 style={{ fontSize: '40px' }}>Welcome to Phonebook!</h1>
       <p style={{ fontSize: 'larger' }}>
         Ready to take control of your contacts?
-        Just sign up or log in to your account and get started
+        Just sign up or log in to your account and get started!
       </p>
     </div>
   );

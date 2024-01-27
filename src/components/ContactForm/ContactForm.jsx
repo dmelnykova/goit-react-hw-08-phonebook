@@ -2,8 +2,8 @@ import { Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { Wrapper, Form, Button } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts } from '../../redux/selectors';
-import { addContacts } from '../../redux/operations';
+import { selectContacts } from '../../redux/contacts/selectors';
+import { addContacts } from '../../redux/contacts/operations';
 import * as Notiflix from 'notiflix';
 
 const validationSchema = Yup.object().shape({
