@@ -1,6 +1,6 @@
 import { Formik } from 'formik';
 import { useDispatch } from 'react-redux';
-import { logIn } from 'redux/auth/operations';
+import { logIn } from '../../redux/auth/operations';
 import * as Yup from 'yup';
 import { Button, ErrorMessage, Field, Form } from './LoginForm.styled';
 

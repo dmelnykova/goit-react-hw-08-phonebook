@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import { Wrapper, Form, Button } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from '../../redux/contacts/selectors';
-import { addContacts } from '../../redux/contacts/operations';
+import { addContact } from '../../redux/contacts/operations';
 import * as Notiflix from 'notiflix';
 
 const validationSchema = Yup.object().shape({
@@ -30,7 +30,7 @@ export const ContactForm = () => {
       return;
     }
 
-    dispatch(addContacts(values));
+    dispatch(addContact(values)); 
   };
 
   return (
