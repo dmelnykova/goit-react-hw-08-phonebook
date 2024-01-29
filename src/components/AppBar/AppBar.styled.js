@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
+  height: 78px;
   display: flex;
-  padding: 4px 8px;
-  border: 2px solid black;
-  border-radius: 4px;
   justify-content: space-between;
-  background-color: azure;
-  font-size: 20px;
+  align-items: center;
+  background-color: #2F4F4F;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 16px;
 `;

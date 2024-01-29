@@ -10,8 +10,8 @@ const validationSchema = Yup.object().shape({
   name: Yup.string().min(3, 'Too Short!').required('Required'),
   number: Yup.string()
     .matches(
-      new RegExp(/^\d{3}-\d{2}-\d{2}$/),
-      'Phone number must be in the format "000-00-00"'
+      /^(\d{2,}-\d{2,}-\d{2,}|\d{2,}-\d{2,}|\d{5,})$/,
+      'Phone number must be min 5 numbers (1234567 or 123-45-67)'
     )
     .required('Required!'),
 });

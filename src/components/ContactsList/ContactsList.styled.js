@@ -1,22 +1,28 @@
-// import styled from 'styled-components';
+import styled from 'styled-components';
 
-// export const Item = styled.li`
-//     display: flex;
-//     gap: 18px;
-//     margin-left: 50px;
-//     margin-bottom: 18px;
-//     font-size: 20px;
-//     font-weight: 500;
-//     align-items: center;
-// `;
+export const Item = styled.li`
+  list-style: none;
+`;
 
-// export const ButtonList = styled.button`
-//     font-size: 16px;
-//     border-radius: 4px;
-//     transition: background-color 0.3s ease, color 0.5s ease;
-//     &:hover,
-//     &:focus {
-//     color: white;
-//     background-color: red;
-//     outline: none;}
-// `;
+export const Span = styled.span`
+  line-height: 48px;
+  padding-right: 12px;
+  font-size: 18px;
+`;
+
+export const Btn = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  font-size: 12px bold;
+  background-color: white;
+  border: transparent;
+  border-radius: 8px;
+  &:hover {
+    background-color: #ffffff;
+  }
+`;

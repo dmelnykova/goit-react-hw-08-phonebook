@@ -1,4 +1,4 @@
-import { useAuth } from "hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 import { useDispatch } from "react-redux";
 import { logOut } from "../../redux/auth/operations";
 import { Button, UserInfo } from "./UserMenu.styled";

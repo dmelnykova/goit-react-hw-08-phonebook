@@ -1,9 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const MainContainer = styled.div`
-  max-width: 1440px;
+export const Wrapper = styled.div`
   height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #ffffff;
+  margin: 0 auto;
+  background-color: #F8F8FF;
 `;

@@ -8,14 +8,11 @@ export const MainNav = styled.nav`
 
 
 export const Link = styled(NavLink)`
-  padding: 2px 4px;
-  background-color: blue;
+  font-size: 22px;
   color: white;
-  border: 2px solid black;
-  border-radius: 4px;
   text-decoration: none;
 
   &:hover {
-    background-color: orange;
+    color: #CCD6DD;
   }
 `;
