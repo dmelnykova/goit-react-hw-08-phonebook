@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-display: flex;
-gap: 22px;
+  display: flex;
+  gap: 22px;
 `;
 
 export const Button = styled(NavLink)`
