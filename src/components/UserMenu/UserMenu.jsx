@@ -9,7 +9,7 @@ export const UserMenu = () => {
     const handleLogOut = () => dispatch(logOut());
     return (
         <UserInfo>
-            <UserName>{user.name}</UserName>
+            <UserName>{user.email}</UserName>
             <Button type="button" onClick={handleLogOut} >Logout</Button>
         </UserInfo>
     )

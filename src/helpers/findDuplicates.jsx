@@ -1,5 +1,6 @@
 import toast from 'react-hot-toast';
 
+
 export const findDuplicates = (contacts, newContact) => {
   const isDuplicateName = contacts.some(
     contact => contact.name.toLowerCase() === newContact.name.toLowerCase()
@@ -11,13 +12,15 @@ export const findDuplicates = (contacts, newContact) => {
 
   if (isDuplicateName) {
     toast.error(`'${newContact.name}' is already in contacts.`);
-    return newContact;
+    return true; 
   }
 
   if (isDuplicateNumber) {
     toast.error(
       `Number '${newContact.number}' is already saved under the name '${newContact.name}'`
     );
-    return newContact;
+    return true; 
   }
+
+  return false; 
 };
