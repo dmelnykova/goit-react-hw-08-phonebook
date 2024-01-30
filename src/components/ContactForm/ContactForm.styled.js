@@ -24,7 +24,6 @@ export const ErrorMessage = styled(Error)`
 `;
 
 export const Button = styled.button`
-    width: 100%;
     background-color: #4078a5;
     color: white;
     padding: 10px;

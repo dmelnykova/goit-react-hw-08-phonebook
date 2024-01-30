@@ -8,5 +8,4 @@ export const Header = styled.header`
   background-color: #2F4F4F;
   padding-left: 100px;
   padding-right: 100px;
-  margin-bottom: 16px;
 `;

@@ -5,9 +5,6 @@ import {
 } from '../contacts/operations';
 import { createSlice } from '@reduxjs/toolkit';
 
-
-// const { createSlice } = require('@reduxjs/toolkit');
-
 const handlePending = state => {
   state.isLoading = true;
 };

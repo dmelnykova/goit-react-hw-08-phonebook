@@ -3,18 +3,25 @@ import styled from "styled-components";
 export const UserInfo = styled.div`
   display: flex;
   gap: 20px;
-  font-weight: 500;
+  font-weight: 700;
+  align-items: center;
 `;
 
 export const Button = styled.button`
-  padding: 2px 4px;
-  background-color: blue;
-  color: white;
-  border: 2px solid black;
-  border-radius: 4px;
-  text-decoration: none;
+  background-color: #F8F8FF;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
 
   &:hover {
-    background-color: orange;
+    background-color: black;
+    color: white;
   }
 `;
+
+export const UserName = styled.p`
+  font-size: 22px;
+  color: white;
+`;
+
