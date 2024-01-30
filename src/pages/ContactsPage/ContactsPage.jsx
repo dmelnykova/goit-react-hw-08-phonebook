@@ -6,9 +6,9 @@ import { PhoneFormWrapper } from "./ContactsPage.styled";
 export default function ContactPage() {
   return (
     <PhoneFormWrapper>
-      <h1>Phonebook</h1>
+      {/* <h2>New Contact</h2> */}
       <ContactForm />
-      <h2>Contacts</h2>
+      {/* <Text>Phonebook</Text> */}
       <FilterField />
       <ContactsList />
     </PhoneFormWrapper>

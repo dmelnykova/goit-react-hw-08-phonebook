@@ -1,10 +1,10 @@
-import { Formik, Field, ErrorMessage } from 'formik';
+import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { Wrapper, Form, Button } from './ContactForm.styled';
+import { Form, Button, Field, ErrorMessage } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from '../../redux/contacts/selectors';
 import { addContact } from '../../redux/contacts/operations';
-import * as Notiflix from 'notiflix';
+import { findDuplicates } from '../../helpers/findDuplicates';
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().min(3, 'Too Short!').required('Required'),
@@ -21,12 +21,9 @@ export const ContactForm = () => {
   const dispatch = useDispatch();
 
   const handleAddContact = values => {
-    const checkContact = contacts.some(
-      contact => contact.name.toLowerCase() === values.name.toLowerCase()
-    );
+    const isDuplicate = findDuplicates(contacts, values);
 
-    if (checkContact) {
-      Notiflix.Report.warning('Contact has not been added.', `${values.name} is already in contacts.`);
+    if (isDuplicate) {
       return;
     }
 
@@ -34,7 +31,6 @@ export const ContactForm = () => {
   };
 
   return (
-    <Wrapper>
       <Formik
         initialValues={{
           name: '',
@@ -48,21 +44,19 @@ export const ContactForm = () => {
       >
         {({ values, handleChange }) => (
           <Form>
-            <label>Name</label>
             <Field
               id="name"
               name="name"
-              placeholder="Tom"
+              placeholder="Name"
               value={values.name}
               onChange={handleChange}
             />
             <ErrorMessage name="name" component="span" />
 
-            <label>Number</label>
             <Field
               id="number"
               name="number"
-              placeholder="000-00-00"
+              placeholder="Number"
               value={values.number}
               onChange={handleChange}
             />
@@ -72,6 +66,5 @@ export const ContactForm = () => {
           </Form>
         )}
       </Formik>
-    </Wrapper>
   );
 };

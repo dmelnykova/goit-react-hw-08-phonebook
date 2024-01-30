@@ -45,6 +45,7 @@ export const Button = styled.button`
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
+  border: none;
 
   &:hover {
     background-color: black;
