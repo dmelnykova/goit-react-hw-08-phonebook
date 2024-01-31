@@ -8,7 +8,9 @@ export const UserInfo = styled.div`
 `;
 
 export const Button = styled.button`
-  background-color: #F8F8FF;
+  background-color: #B08849;
+  color: #263f3f;
+  font-weight: 700;
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;

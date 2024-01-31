@@ -14,7 +14,7 @@ export const Form = styled(FormWrapper)`
 export const Field = styled(ContactInfo)`
     font-size: 25px;
     padding: 8px;
-    border: 2px solid #4078a5;
+    border: 2px solid #403050;
     border-radius: 8px;
 `;
 
@@ -24,7 +24,7 @@ export const ErrorMessage = styled(Error)`
 `;
 
 export const Button = styled.button`
-    background-color: #4078a5;
+    background-color: #403050;
     color: white;
     padding: 10px;
     border-radius: 6px;
